@@ -1,24 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_modular/flutter_modular.dart';
+import 'package:raro_budget_app/module/app_module.dart';
 
-import 'home/home.dart';
-
-void main() {
-  runApp(const MyApp());
+void main(){
+  return runApp(ModularApp(module: AppModule(), child:  const AppWidget()));
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class AppWidget extends StatelessWidget {
+  const AppWidget({super.key});
 
-  // This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.red),
-        useMaterial3: true,
-      ),
-      home: const Home(),
-    );
+
+  Widget build(BuildContext context){
+    return MaterialApp.router(
+      title: 'My Smart App',
+      theme: ThemeData(primarySwatch: Colors.blue),
+      routerConfig: Modular.routerConfig,
+    ); //added by extension 
   }
 }
