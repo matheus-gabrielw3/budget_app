@@ -1,5 +1,5 @@
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:raro_budget_app/home/home.dart';
+import 'package:raro_budget_app/login/login_module.dart';
 class AppModule extends Module {
 
   @override
@@ -7,6 +7,6 @@ class AppModule extends Module {
 
   @override
   void routes(r) {
-      r.child('/', child: (context) => const Home());
+      r.module('/', module: LoginModule());
   }
 }
