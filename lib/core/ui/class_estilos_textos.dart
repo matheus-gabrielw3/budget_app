@@ -22,13 +22,18 @@ class ClassEstilosTextos {
 
     static final branco24w500roboto = GoogleFonts.roboto(
     color: const Color(0xffFFFFFF),
-    fontSize: 15,
+    fontSize: 24,
     fontWeight: FontWeight.w500,
   );
 
       static final branco15w400roboto = GoogleFonts.roboto(
     color: const Color(0xffFFFFFF),
-    fontSize: 24,
+    fontSize: 15,
+    fontWeight: FontWeight.w400,
+  );
+      static final branco14w400roboto = GoogleFonts.roboto(
+    color: const Color(0xffFFFFFF),
+    fontSize: 14,
     fontWeight: FontWeight.w400,
   );
 
