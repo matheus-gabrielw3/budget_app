@@ -1,5 +1,5 @@
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:raro_budget_app/login/login_module.dart';
+import 'package:raro_budget_app/cadastro/cadastro_module.dart';
 class AppModule extends Module {
 
   @override
@@ -7,6 +7,6 @@ class AppModule extends Module {
 
   @override
   void routes(r) {
-      r.module('/', module: LoginModule());
+      r.module('/', module: CadastroModule());
   }
 }
