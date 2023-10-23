@@ -15,7 +15,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     Timer(const Duration(seconds: 3), () {
-      Modular.to.navigate('/login');
+      Modular.to.navigate('/cadastro');
     });
 
     super.initState();
