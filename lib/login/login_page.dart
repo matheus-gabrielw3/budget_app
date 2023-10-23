@@ -1,27 +1,28 @@
 import 'package:flutter/material.dart';
+import 'package:raro_budget_app/core/ui/class_estilos_textos.dart';
 
-class CadastroPage extends StatefulWidget {
-  const CadastroPage({super.key});
+class LoginPage extends StatefulWidget {
+  const LoginPage({super.key});
 
   @override
-  State<CadastroPage> createState() => _CadastroPageState();
+  State<LoginPage> createState() => _LoginPageState();
 }
 
-class _CadastroPageState extends State<CadastroPage> {
+class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.only(left: 48.0),
-        child: Column(
+        child: ListView(
           children: [
             Padding(
-              padding: const EdgeInsets.only(top: 74),
+              padding: const EdgeInsets.only(right: 320.0),
               child: Image.asset('assets/images/logo.png'),
             ),
-            const Padding(
-              padding: EdgeInsets.only(top: 16.5, right: 112, bottom: 8),
-              child: Text('Vamos\ncomeçar'),
+             Padding(
+              padding: const EdgeInsets.only(top: 16.5, right: 112, bottom: 8),
+              child: Text('Vamos\ncomeçar', style: ClassEstilosTextos.azul48w400roboto,),
             ),
             const Text('Novo usuário? Crie uma conta'),
             const SizedBox(
@@ -32,7 +33,7 @@ class _CadastroPageState extends State<CadastroPage> {
               child: TextFormField(
                 decoration: const InputDecoration(
                   border: UnderlineInputBorder(),
-                  labelText: 'Enter your username',
+                  labelText: 'Insira seu email',
                 ),
               ),
             ),
@@ -42,15 +43,19 @@ class _CadastroPageState extends State<CadastroPage> {
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   ElevatedButton(
-                      style: ElevatedButton.styleFrom(),
+                      style: ElevatedButton.styleFrom(
+                        fixedSize: Size(114, 36),
+                        elevation: 3,
+                        shape: const RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(30)))
+                      ),
                       onPressed: () {},
-                      child: const Text('CONTINUAR')),
+                      child: Text('CONTINUAR', style: ClassEstilosTextos.branco14w400roboto,)),
                 ],
               ),
             ),
-            const Padding(
-              padding: EdgeInsets.only(right: 48.0, top: 52),
-              child: Center(child: Text('ou')),
+             Padding(
+              padding: const EdgeInsets.only(right: 48.0, top: 52),
+              child: Center(child: Text('ou', style: ClassEstilosTextos.cinza14w400roboto,)),
             ),
             const SizedBox(height: 16,),
             Padding(
@@ -58,17 +63,19 @@ class _CadastroPageState extends State<CadastroPage> {
               child: Column(
                 children: [
                    OutlinedButton.icon(
+                    style: OutlinedButton.styleFrom(
+
+                    ),
                       onPressed: () {},
                       icon: const Icon(Icons.email_outlined),
-                      label: const Text('CONTINUAR COM O GOOGLE')),
+                      label:  Text('CONTINUAR COM O GOOGLE', style: ClassEstilosTextos.cinza14w400roboto,)),
                       const SizedBox(height: 30,),
                   ElevatedButton.icon(
                     style: ElevatedButton.styleFrom(
-                      padding: const EdgeInsets.all(8),
                     ),
                       onPressed: () {},
                       icon: const Icon(Icons.facebook),
-                      label: const Text('CONTINUAR COM O FACEBOOK'))
+                      label:  Text('CONTINUAR COM O FACEBOOK', style: ClassEstilosTextos.cinza14w400roboto,))
                 ],
               ),
             ),
