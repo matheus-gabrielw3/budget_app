@@ -1,16 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:raro_budget_app/core/ui/class_estilos_textos.dart';
-import 'package:raro_budget_app/login/loginsenha_page.dart';
-import 'package:flutter_modular/flutter_modular.dart';
 
-class LoginPage extends StatefulWidget {
-  const LoginPage({super.key});
+class LoginsenhaPage extends StatefulWidget {
+  const LoginsenhaPage({super.key});
 
   @override
-  State<LoginPage> createState() => _LoginPageState();
+  State<LoginsenhaPage> createState() => _LoginsenhaPageState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _LoginsenhaPageState extends State<LoginsenhaPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,19 +23,9 @@ class _LoginPageState extends State<LoginPage> {
             Padding(
               padding: const EdgeInsets.only(top: 16.5, right: 112, bottom: 8),
               child: Text(
-                'Vamos\ncomeçar',
+                'Insira sua \nsenha',
                 style: ClassEstilosTextos.azul48w400roboto,
               ),
-            ),
-            Row(
-              children: [
-                Text(
-                  'Novo usuário? ',
-                  style: ClassEstilosTextos.cinza14w400roboto,
-                ),
-                Text('Crie uma conta',
-                    style: ClassEstilosTextos.roxo13w500roboto)
-              ],
             ),
             const SizedBox(
               height: 46,
@@ -53,6 +41,16 @@ class _LoginPageState extends State<LoginPage> {
               ),
             ),
             Padding(
+              padding: const EdgeInsets.only(right: 60),
+              child: TextFormField(
+                style: ClassEstilosTextos.cinza14w400roboto,
+                decoration: const InputDecoration(
+                  border: UnderlineInputBorder(),
+                  labelText: 'Senha',
+                ),
+              ),
+            ),
+            Padding(
               padding: const EdgeInsets.only(right: 48.0, top: 16),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.end,
@@ -64,9 +62,7 @@ class _LoginPageState extends State<LoginPage> {
                           shape: const RoundedRectangleBorder(
                               borderRadius:
                                   BorderRadius.all(Radius.circular(30)))),
-                      onPressed: () {
-                        Modular.to.navigate('/loginsenha');
-                      },
+                      onPressed: () {},
                       child: Text(
                         'CONTINUAR',
                         style: ClassEstilosTextos.branco14w400roboto,
