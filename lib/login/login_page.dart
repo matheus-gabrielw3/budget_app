@@ -44,7 +44,7 @@ class _LoginPageState extends State<LoginPage> {
                 children: [
                   ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        fixedSize: Size(114, 36),
+                        fixedSize: const Size(114, 36),
                         elevation: 3,
                         shape: const RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(30)))
                       ),
