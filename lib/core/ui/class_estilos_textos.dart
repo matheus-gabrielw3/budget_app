@@ -36,6 +36,11 @@ class ClassEstilosTextos {
     fontSize: 14,
     fontWeight: FontWeight.w400,
   );
+      static final branco14w500roboto = GoogleFonts.roboto(
+    color: const Color(0xffFFFFFF),
+    fontSize: 14,
+    fontWeight: FontWeight.w400,
+  );
 
    static final branco12w300roboto = GoogleFonts.roboto(
     color: const Color(0xffFFFFFF),
@@ -133,5 +138,10 @@ class ClassEstilosTextos {
     fontWeight: FontWeight.w500,
   );
 
- 
+  static final azul34w700roboto = GoogleFonts.roboto(
+    color: const Color(0xff44C2FD),
+    fontSize: 34,
+    fontWeight: FontWeight.w700,
+    letterSpacing: 0.25,
+  );
 }
