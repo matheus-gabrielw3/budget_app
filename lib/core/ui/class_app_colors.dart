@@ -10,13 +10,12 @@ class ClassAppColors {
   static const Color rosaEscuro = Color(0xFFA29EFF);
   static const LinearGradient linearAzul = LinearGradient(
     begin: Alignment.topLeft,
-    end: Alignment(0.2, 1),
+    end: Alignment(1.5, 1),
+    transform: GradientRotation(40),
     colors: <Color>[
       Color(0xff343090),
       Color(0xff44C2FD),
     ], 
     tileMode: TileMode.mirror,
   );
-
-
 }

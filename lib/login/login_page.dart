@@ -3,6 +3,8 @@ import 'package:raro_budget_app/core/ui/class_estilos_textos.dart';
 import 'package:raro_budget_app/login/loginsenha_page.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
+import '../core/ui/custom_elevated_button_continuar.dart';
+
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
 
@@ -57,20 +59,12 @@ class _LoginPageState extends State<LoginPage> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                          fixedSize: const Size(114, 36),
-                          elevation: 3,
-                          shape: const RoundedRectangleBorder(
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(30)))),
-                      onPressed: () {
-                        Modular.to.navigate('/loginsenha');
-                      },
-                      child: Text(
-                        'CONTINUAR',
-                        style: ClassEstilosTextos.branco14w400roboto,
-                      )),
+                  CustomElevatedButtonContinuar(
+                    titulo: "CONTINUAR",
+                    onPressed: () {
+                      Modular.to.navigate('/loginsenha');
+                    },
+                  )
                 ],
               ),
             ),

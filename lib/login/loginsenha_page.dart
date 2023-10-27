@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:raro_budget_app/core/ui/class_estilos_textos.dart';
 
+import '../core/ui/custom_elevated_button_continuar.dart';
+
 class LoginsenhaPage extends StatefulWidget {
   const LoginsenhaPage({super.key});
 
@@ -9,15 +11,19 @@ class LoginsenhaPage extends StatefulWidget {
 }
 
 class _LoginsenhaPageState extends State<LoginsenhaPage> {
+  bool mostraSenha = true;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.only(left: 48.0),
+        padding: const EdgeInsets.only(left: 48.0, top: 74),
         child: ListView(
           children: [
             Padding(
-              padding: const EdgeInsets.only(right: 320.0),
+              padding: const EdgeInsets.only(
+                right: 320.0,
+              ),
               child: Image.asset('assets/images/logo.png'),
             ),
             Padding(
@@ -41,69 +47,41 @@ class _LoginsenhaPageState extends State<LoginsenhaPage> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(right: 60),
+              padding: const EdgeInsets.only(right: 48, top: 30),
               child: TextFormField(
                 style: ClassEstilosTextos.cinza14w400roboto,
-                decoration: const InputDecoration(
-                  border: UnderlineInputBorder(),
-                  labelText: 'Senha',
-                ),
+                decoration: InputDecoration(
+                    border: const UnderlineInputBorder(),
+                    labelText: 'Senha',
+                    suffixIcon: InkWell(
+                      onTap: () {
+                        setState(() {
+                          mostraSenha = !mostraSenha;
+                        });
+                      },
+                      child: Icon(
+                        mostraSenha ? Icons.visibility_off : Icons.visibility,
+                        color: Colors.grey,
+                      ),
+                    )),
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(right: 48.0, top: 16),
+              padding: const EdgeInsets.only(top: 20, right: 40),
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.end,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                          fixedSize: const Size(114, 36),
-                          elevation: 3,
-                          shape: const RoundedRectangleBorder(
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(30)))),
-                      onPressed: () {},
-                      child: Text(
-                        'CONTINUAR',
-                        style: ClassEstilosTextos.branco14w400roboto,
-                      )),
-                ],
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(right: 48.0, top: 52),
-              child: Center(
-                  child: Text(
-                'ou',
-                style: ClassEstilosTextos.cinza14w400roboto,
-              )),
-            ),
-            const SizedBox(
-              height: 16,
-            ),
-            Padding(
-              padding: const EdgeInsets.only(right: 45.0),
-              child: Column(
-                children: [
-                  OutlinedButton.icon(
-                      style: OutlinedButton.styleFrom(),
-                      onPressed: () {},
-                      icon: const Icon(Icons.email_outlined),
-                      label: Text(
-                        'CONTINUAR COM O GOOGLE',
-                        style: ClassEstilosTextos.cinza14w400roboto,
-                      )),
-                  const SizedBox(
-                    height: 30,
+                  TextButton(
+                    onPressed: () {},
+                    child: Text(
+                      "RECUPERAR SENHA",
+                      style: ClassEstilosTextos.roxo13w500roboto,
+                    ),
                   ),
-                  ElevatedButton.icon(
-                      style: ElevatedButton.styleFrom(),
-                      onPressed: () {},
-                      icon: const Icon(Icons.facebook),
-                      label: Text(
-                        'CONTINUAR COM O FACEBOOK',
-                        style: ClassEstilosTextos.cinza14w400roboto,
-                      ))
+                  CustomElevatedButtonContinuar(
+                    titulo: "CONTINUAR",
+                    onPressed: () {},
+                  ),
                 ],
               ),
             ),
