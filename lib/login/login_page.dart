@@ -37,8 +37,13 @@ class _LoginPageState extends State<LoginPage> {
                   'Novo usuário? ',
                   style: ClassEstilosTextos.cinza14w400roboto,
                 ),
-                Text('Crie uma conta',
-                    style: ClassEstilosTextos.roxo13w500roboto)
+                InkWell(
+                  child: Text('Crie uma conta',
+                      style: ClassEstilosTextos.roxo13w500roboto),
+                  onTap: () {
+                    Modular.to.navigate("/cadastro");
+                  },
+                )
               ],
             ),
             const SizedBox(
