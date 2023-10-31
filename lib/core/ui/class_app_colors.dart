@@ -13,7 +13,7 @@ class ClassAppColors {
     end: Alignment(1.5, 1),
     transform: GradientRotation(40),
     colors: <Color>[
-      Color(0xff343090),
+      Color(0xff343090), 
       Color(0xff44C2FD),
     ], 
     tileMode: TileMode.mirror,
