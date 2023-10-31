@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:raro_budget_app/core/ui/class_estilos_textos.dart';
-
+import 'package:flutter_modular/flutter_modular.dart';
 import '../core/ui/custom_elevated_button_continuar.dart';
 
 class LoginsenhaPage extends StatefulWidget {
@@ -80,7 +80,9 @@ class _LoginsenhaPageState extends State<LoginsenhaPage> {
                   ),
                   CustomElevatedButtonContinuar(
                     titulo: "CONTINUAR",
-                    onPressed: () {},
+                    onPressed: () {
+                      Modular.to.navigate('/erroconexao');
+                    },
                   ),
                 ],
               ),
