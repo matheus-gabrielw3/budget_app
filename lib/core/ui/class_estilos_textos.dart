@@ -85,6 +85,13 @@ class ClassEstilosTextos {
     letterSpacing: 0.15,
   );
 
+  static final preto16w500robot = GoogleFonts.roboto(
+    color: const Color(0xff000000),
+    fontSize: 16,
+    fontWeight: FontWeight.w500,
+    letterSpacing: 0.15,
+  );
+
   static final preto24w400roboto = GoogleFonts.roboto(
     color: const Color(0xff000000).withOpacity(0.87),
     fontSize: 24,

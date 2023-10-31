@@ -13,6 +13,7 @@ class AppWidget extends StatelessWidget {
   Widget build(BuildContext context){
        Modular.setInitialRoute('/');
     return MaterialApp.router(
+      debugShowCheckedModeBanner: false,
       title: 'My Smart App',
       theme: ThemeData(primarySwatch: Colors.blue),
       routerConfig: Modular.routerConfig,
