@@ -9,6 +9,6 @@ class LoginModule extends Module{
   void routes(r) {
     r.child('/', child: (context) => const SplashScreen());
     r.child('/login', child: (context) => const LoginPage());
-    r.module('/cadastro', module: CadastroModule());
+    r.module('/cadastro/', module: CadastroModule());
   }
 }

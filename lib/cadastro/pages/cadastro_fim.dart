@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:raro_budget_app/core/ui/class_app_colors.dart';
 import 'package:raro_budget_app/core/ui/class_estilos_textos.dart';
+import 'package:flutter_modular/flutter_modular.dart';
+
 
 class CadastroFim extends StatefulWidget {
   final PageController controller;
@@ -52,7 +54,9 @@ class _CadastroFimState extends State<CadastroFim> {
               Padding(
                 padding: const EdgeInsets.only(right: 235.0, top: 24),
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Modular.to.navigate('inicio');
+                  },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: ClassAppColors.ciano,
                       shape: RoundedRectangleBorder(
